@@ -1,0 +1,770 @@
+
+
+/* ========= start of global ============*/
+
+:root{
+  --main-color:#0078FF;
+}
+
+
+body{
+  background-color: #F5F5F5;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+li{
+  list-style: none;
+}
+.main-tittle h3{
+  color:#1E1E1E;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-tittle p{
+  position: relative;
+}
+
+.main-tittle p::after{
+  content: "";
+  width: 40px;
+  height: 5px;
+  position: absolute;
+  background-color: var(--main-color);
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h5{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color:#1E1E1E;
+  font-size: 2rem;
+  position: relative;
+}
+h5::after{
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: .1875rem;
+  background-color: var(--main-color);
+  bottom: -8px;
+  left: 0;
+}
+
+/* ========= end of global ============*/
+
+
+/* ========= start of navbar ============*/
+
+
+nav .container .logo{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #fff ;
+}
+
+nav .container .links {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff !important;
+    position: relative;
+    
+
+}
+
+nav .container .links::before{
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: #fff ;
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    transition: width 0.5s;
+}
+
+
+nav .container .links.active::before,
+nav .container .links:hover::before {
+  width: 60%;
+}
+
+nav .icon{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+
+nav .dropdown .dropdown-menu{
+  display: none;
+} 
+
+nav .dropdown:hover > .dropdown-menu,
+nav .dropend:hover > .dropdown-menu{
+  display: block;
+
+} 
+
+nav .dropdown-menu li a{
+  transition: color 0.5s;
+}
+
+nav .dropdown-menu li a:hover{
+  color: var(--main-color);
+}
+
+
+
+
+nav .dropend:hover > .dropdown-menu{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+@media screen and (max-width:769px) {
+  nav .dropend:hover > .dropdown-menu{
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+}
+
+@media screen and (max-width:769px) {
+  nav .container .links::before{
+  display: none;
+  }
+
+
+  nav .container .links {
+    transition: color 0.5s;
+  }
+
+  nav .container .links.active,
+  nav .container .links:hover{
+    color: var(--main-color) !important;
+
+  }
+
+}
+
+/* ========= end of navbar ============*/
+
+/* ========= start of header ============*/
+
+header{
+    background-image: linear-gradient(#00000073,#00000073),url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    z-index: 99;
+   position: relative;
+  
+}
+
+header .header-content{
+    text-align: center;
+    
+   
+}
+
+
+header .header-content h1{
+    font-size: 4.5rem;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    
+}
+
+header .header-content p::after{
+    content: "|";
+    animation-name: typing;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    color: #fff;
+    font-size: 2.5rem;
+    
+
+}
+
+@keyframes typing{
+    0% {
+        content: "D|";
+      }
+      1% {
+        content: "De";
+      }
+      2% {
+        content: "Des|";
+      }
+      3% {
+        content: "Desi";
+      }
+      4% {
+        content: "Desig|";
+      }
+      5% {
+        content: "Design";
+      }
+      6% {
+        content: "Designe";
+      }
+      7% {
+        content: "Designer|";
+      }
+      8% {
+        content: "Designer";
+      }
+      15% {
+        content: "Designe|";
+      }
+      16% {
+        content: "Design";
+      }
+      17% {
+        content: "Desig|";
+      }
+      18% {
+        content: "Desi";
+      }
+      19% {
+        content: "Des|";
+      }
+      20% {
+        content: "De";
+      }
+      21% {
+        content: "D|";
+      }
+    
+      22% {
+        content: "De";
+      }
+      23% {
+        content: "Dev|";
+      }
+      24% {
+        content: "Deve";
+      }
+      25% {
+        content: "Devel|";
+      }
+      26% {
+        content: "Develo";
+      }
+      27% {
+        content: "Develop|";
+      }
+      28% {
+        content: "Develope";
+      }
+      29% {
+        content: "Developer|";
+      }
+      37% {
+        content: "Develope";
+      }
+      38% {
+        content: "Develop|";
+      }
+      39% {
+        content: "Develo";
+      }
+      40% {
+        content: "Devel|";
+      }
+      41% {
+        content: "Deve";
+      }
+      42% {
+        content: "Dev|";
+      }
+      43% {
+        content: "De";
+      }
+      44% {
+        content: "D|";
+      }
+    
+      45% {
+        content: "F|";
+      }
+      46% {
+        content: "Fr|";
+      }
+      47% {
+        content: "Fre";
+      }
+      48% {
+        content: "Free|";
+      }
+      49% {
+        content: "Freel";
+      }
+      50% {
+        content: "Freela|";
+      }
+      51% {
+        content: "Freelanc";
+      }
+      52% {
+        content: "Freelance|";
+      }
+      53% {
+        content: "Freelancer";
+      }
+      60% {
+        content: "Freelance|";
+      }
+      61% {
+        content: "Freelanc";
+      }
+      62% {
+        content: "Freelan|";
+      }
+      63% {
+        content: "Freela";
+      }
+      64% {
+        content: "Freel|";
+      }
+      65% {
+        content: "Free";
+      }
+      66% {
+        content: "Fre|";
+      }
+      67% {
+        content: "Fr";
+      }
+      68% {
+        content: "F|";
+      }
+      69% {
+        content: "P|";
+      }
+      70% {
+        content: "Ph";
+      }
+     
+      71% {
+        content: "Pho|";
+      }
+     
+      72% {
+        content: "Phot";
+      }
+     
+      73% {
+        content: "Photo|";
+      }
+     
+      74% {
+        content: "Photog";
+      }
+     
+      75% {
+        content: "Photogr|";
+      }
+     
+      76% {
+        content: "Photogra";
+      }
+      77% {
+        content: "Photograp|";
+      }
+      78% {
+        content: "Photograph";
+      }
+     
+      79% {
+        content: "Photographe|";
+      }
+     
+      80% {
+        content: "Photographer";
+      }
+      88% {
+        content: "Photographe|";
+      }
+      89% {
+        content: "Photograph";
+      }
+      90% {
+        content: "Photograp|";
+      }
+      91% {
+        content: "Photogra";
+      }
+      92% {
+        content: "Photogr|";
+      }
+      93% {
+        content: "Photog";
+      }
+      94% {
+        content: "Photo|";
+      }
+      95% {
+        content: "Phot";
+      }
+      96% {
+        content: "Pho|";
+      }
+      97% {
+        content: "Ph";
+      }
+      98% {
+        content: "P|";
+      }
+      100% {
+        content: "|";
+      }
+    }
+
+/* ========== end of headedr ============= */
+    
+/* ========= start of about ============*/
+#about{
+      background-color: #F5F5F5;
+    }
+
+
+#about .about-info p{
+  color:#1E1E1E;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+
+}
+#about .about-info span{
+  color:#4E4E4E;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+
+} 
+ #about .progress{
+      border-radius: 0px ;
+      height: .625rem;
+      background-color:#CDE1F8;
+    }
+
+
+
+/* ========= end of about ============*/
+
+/* ========= start of services ============*/
+#services .color{
+  border: .625rem solid var(--main-color) !important;
+  transition: all 0.3s;
+
+}
+
+#services h2{
+  color:#1E1E1E;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+
+
+
+}
+#services .service-content:hover .color{
+  background-color: var(--main-color);
+  border-color: #CDE1F8 !important;
+
+}
+
+/* ========= end of services ============*/
+
+/* ========= start of counter ============*/
+.counter{
+  background-image: linear-gradient(#0077ffb6  0% 100%),url(../images/counters-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.counter .brdr{
+  border: .625rem solid #CDE1F8 !important;
+
+}
+
+ .counter i{ 
+  color:#CDE1F8 ;
+  
+ }
+
+
+.counter .ico{
+  width: 3rem;
+  height: 3rem;
+  padding: 1.875rem;
+}
+
+/* ========= end of counter ============*/
+
+
+/* ========= start of portfolio ============*/
+#portfolio h2{
+  margin-top: 10px;
+  color:#1E1E1E;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+
+
+
+}
+
+#portfolio .info{
+  margin-top: 10px;
+  color: #4E4E4E;
+  font-size: .8rem;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+
+
+
+}
+
+#portfolio .info-span{
+  color:var(--main-color);
+}
+
+#portfolio .work-icon{
+  border-color:var(--main-color) !important;
+  color: var(--main-color);
+}
+
+#portfolio .work-img{
+  overflow: hidden;
+}
+
+
+#portfolio .work-item img{
+  transition: transform 0.5s;
+}
+
+#portfolio .work-item:hover img{
+  transform:scale(1.2);
+}
+
+/* ========= end of portfolio ============*/
+
+
+/* ========= start of testimonial ============*/
+
+.testimonial{
+  background-image: linear-gradient(#0077ffb6  0% 100%),url(../images/overlay-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding-block: 3.75rem;
+  background-attachment: fixed;
+
+}
+
+
+.testimonial .container-fluid{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial .slide{
+margin: auto;
+width: 80%;
+  
+}
+
+.testimonial .carousel-item img{
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.testimonial .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* ========= end of testimonial ============*/
+
+/* ========= start of blog ============*/
+
+#blog .blog-content .blog-footer img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+#blog .blog-content .blog-text button{
+  position: absolute;
+  top: -1.6875rem;
+  left: 50%;
+  transform: translate(-50%,50%);
+  border: none;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 5px 25px;
+  border-radius: .3125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: .7rem;
+ 
+}
+
+#blog .blog-content .blog-text{
+  position: relative;
+}
+
+#blog .blog-content .blog-text a{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: color 0.5s;
+}
+
+#blog .blog-content .blog-footer i{
+  color:#4E4E4E;
+}
+
+#blog .blog-content .blog-text a:hover{
+  color: var(--main-color);
+}
+
+#blog .blog-content .blog-footer .blog-left span{
+  transition: color 0.5s;
+  cursor: pointer;
+}
+
+
+#blog .blog-content .blog-footer .blog-left span:hover{
+  color: var(--main-color);
+}
+
+/* ========= end of blog ============*/
+
+/* ========= start of contact ============*/
+#contact {
+  background-image: linear-gradient(#0077ffb6  0% 100%),url(../images/overlay-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding-block: 3.75rem;
+  background-attachment: fixed;
+  
+
+}
+#contact .contact-form button{
+  background-color: var(--main-color);
+  color: #fff;
+  border: transparent 3px solid ;
+  margin: auto;
+  border-radius: 1.875rem;
+  transition: background-color 0.3s, border 0.3s;
+  
+
+}
+
+#contact .contact-form button:hover{
+  background-color: #3393FF;
+  border: #CDE1F8 3px solid;
+
+}
+
+#contact .contact-form textarea{
+  resize: vertical;
+
+}
+
+#contact .contact-form h5{
+  position: relative;
+}
+
+#contact .contact-content .list-icon li{
+  color:#4E4E4E;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  padding-bottom: .625rem;
+  
+}
+
+#contact .contact-content .list-icon span{
+  color: var(--main-color);
+  padding-right: .9375rem;
+}
+
+
+#contact .contact-content .social-links li{
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  border: 3px solid var(--main-color);
+  padding-bottom: 14px;
+  padding-top: 6px;
+  transition: all 0.3s;
+}
+
+#contact .contact-content .social-links li:hover{
+  background-color: var(--main-color);
+  border:4px solid #CDE1F8;
+}
+
+
+#contact .contact-content .social-links li i{
+  transition: color 0.3s;
+}
+
+#contact .contact-content .social-links li:hover i{
+color: #fff;
+}
+
+/* ========= end of contact ============*/
+
+/* ========= start of footer ============*/
+footer{
+  background-color: #0062D3;
+
+}
+/* ========= end of footer ============*/
+
+/* ========= start of fixed-icon ============*/
+.fixed-icon{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  
+}
+
+.fixed-icon:hover{
+  background-color: #298EFF;
+}
+/* ========= end of fixed-icon ============*/
